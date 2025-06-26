@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.png" type="image/x-icon" />
+    <title>Text ↔ JSON Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Text ↔ JSON Converter</h1>
+            <button id="themeToggle"><i class="fas fa-moon"></i></button>
+        </header>
+
+        <main>
+            <div class="converter-box">
+                <div class="input-section">
+                    <div class="section-header">
+                        <h2>Input</h2>
+                        <div class="actions">
+                            <button id="clearInput"><i class="fas fa-trash"></i></button>
+                            <button id="pasteInput"><i class="fas fa-paste"></i></button>
+                        </div>
+                    </div>
+                    <textarea id="inputText" placeholder="Enter your text here..."></textarea>
+                    <div class="options">
+                        <label>
+                            <input type="radio" name="conversionType" value="jsonToText" checked>
+                            JSON to Text
+                        </label>
+                        <label>
+                            <input type="radio" name="conversionType" value="jsonEncode">
+                            JSON Encode
+                        </label>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="convertBtn">Convert</button>
+                    <button id="swapBtn"><i class="fas fa-exchange-alt"></i></button>
+                </div>
+
+                <div class="output-section">
+                    <div class="section-header">
+                        <h2>Output</h2>
+                        <div class="actions">
+                            <button id="copyOutput"><i class="fas fa-copy"></i></button>
+                            <button id="downloadOutput"><i class="fas fa-download"></i></button>
+                        </div>
+                    </div>
+                    <textarea id="outputText" readonly placeholder="Result will appear here..."></textarea>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
